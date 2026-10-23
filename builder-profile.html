@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Builder Profile | CONCO</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header class="navbar">
+        <a class="logo" href="/">CONCO</a>
+        <nav>
+            <a href="/builder-dashboard.html">Dashboard</a>
+            <a href="/post-job.html">Post a Job</a>
+            <a href="/jobs.html?mine=1">My Job Listings</a>
+            <a href="/applications.html">Applications</a>
+        </nav>
+        <div class="profile-menu">
+            <button id="profileButton" class="profile-button" type="button">
+                <span id="profileInitial">U</span>
+            </button>
+            <div id="profileDropdown" class="profile-dropdown" hidden>
+                <p id="profileName">My Account</p>
+                <a href="/builder-profile.html">My Profile</a>
+                <a id="profileLogin" href="/login.html">Login</a>
+                <a id="profileRegister" href="/register.html">Register</a>
+                <a id="profileWorker" href="/worker-dashboard.html" hidden>Worker Dashboard</a>
+                <a id="profileBuilder" href="/builder-dashboard.html" hidden>Builder Dashboard</a>
+                <a id="profileLogout" href="#">Logout</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="dashboard-header">
+            <h1>My Builder Profile</h1>
+            <p>Your account and company details.</p>
+        </section>
+
+        <section class="job-card">
+            <p id="builderProfileMessage">Loading your profile...</p>
+            <div id="builderProfileDetails"></div>
+            <a class="button" href="/builder-dashboard.html">Back to Dashboard</a>
+        </section>
+    </main>
+
+    <script src="/js/profile.js"></script>
+    <script src="/js/builder-profile.js"></script>
+</body>
+</html>

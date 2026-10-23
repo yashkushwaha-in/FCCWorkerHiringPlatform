@@ -1,0 +1,94 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register | CONCO</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+    <header>
+        <a class="brand" href="/">CONCO</a>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/jobs.html">Find Work</a>
+            <a href="/login.html">Login</a>
+
+            <div class="profile-menu">
+                <button class="profile-circle" id="profileButton" type="button" aria-label="Open profile menu">
+                    <span id="profileInitial">♙</span>
+                </button>
+                <div class="profile-dropdown" id="profileDropdown" hidden>
+                    <p id="profileName">Welcome to CONCO</p>
+                    <a href="/login.html" id="profileLogin">Login</a>
+                    <a href="/register.html" id="profileRegister">Create Account</a>
+                    <a href="/worker-dashboard.html" id="profileWorker" hidden>Worker Dashboard</a>
+                    <a href="/builder-dashboard.html" id="profileBuilder" hidden>Builder Dashboard</a>
+                    <a href="#" id="profileLogout" hidden>Logout</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="auth-container">
+        <form id="registerForm" class="auth-card">
+            <h1>Create Account</h1>
+            <p>Join CONCO as a worker or builder.</p>
+
+            <label for="name">Full Name</label>
+            <input id="name" name="name" type="text" required>
+
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" required>
+
+            <label for="phone">Phone Number</label>
+            <input id="phone" name="phone" type="tel" required>
+
+            <label for="password">Password</label>
+            <input id="password" name="password" type="password" minlength="8" required>
+
+            <label for="role">Account Type</label>
+            <select id="role" name="role" required>
+                <option value="">Choose account type</option>
+                <option value="Worker">Worker</option>
+                <option value="Builder">Builder</option>
+            </select>
+
+            <div id="workerFields" hidden>
+                <label for="skill">Skill</label>
+                <input id="skill" name="skill" placeholder="e.g. Electrician">
+
+                <label for="experience">Experience (years)</label>
+                <input id="experience" name="experience_years" type="number" min="0" value="0">
+
+                <label for="area">Preferred Work Area</label>
+                <input id="area" name="preferred_area">
+
+                <label for="wage">Expected Daily Wage (₹)</label>
+                <input id="wage" name="expected_daily_wage" type="number" min="0" value="0">
+            </div>
+
+            <div id="builderFields" hidden>
+                <label for="company">Company Name</label>
+                <input id="company" name="company_name">
+
+                <label for="workArea">Work Area</label>
+                <input id="workArea" name="work_area">
+            </div>
+
+            <button class="button full" type="submit">Create Account</button>
+
+            <p id="registerMessage" class="message" role="status"></p>
+
+            <p class="auth-footer">
+                Already registered? <a href="/login.html">Login here</a>
+            </p>
+        </form>
+    </main>
+
+    <script src="/js/auth.js"></script>
+    <script src="/js/profile.js"></script>
+</body>
+</html>

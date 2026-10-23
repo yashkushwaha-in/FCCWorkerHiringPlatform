@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Jobs | CONCO</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+    <header>
+        <a class="brand" href="/">CONCO</a>
+
+        <nav>
+            <a href="/">Home</a>
+            <a href="/worker-dashboard.html">Worker Dashboard</a>
+            <a href="/builder-dashboard.html">Builder Dashboard</a>
+            <a href="/applications.html">Applications</a>
+
+            <div class="profile-menu">
+                <button class="profile-circle" id="profileButton" type="button" aria-label="Open profile menu">
+                    <span id="profileInitial">♙</span>
+                </button>
+
+                <div class="profile-dropdown" id="profileDropdown" hidden>
+                    <p id="profileName">Welcome to CONCO</p>
+                    <a href="/login.html" id="profileLogin">Login</a>
+                    <a href="/register.html" id="profileRegister">Create Account</a>
+                    <a href="/worker-dashboard.html" id="profileWorker" hidden>Worker Dashboard</a>
+                    <a href="/builder-dashboard.html" id="profileBuilder" hidden>Builder Dashboard</a>
+                    <a href="#" id="profileLogout" hidden>Logout</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="dashboard">
+        <section class="welcome">
+            <span class="eyebrow">OPPORTUNITIES</span>
+            <h1 id="jobsHeading">Find Available Jobs</h1>
+            <p>Discover work opportunities that match your skills and location.</p>
+        </section>
+
+        <div class="toolbar">
+            <input
+                id="jobSearch"
+                type="search"
+                placeholder="Search by job title, skill, or location"
+                aria-label="Search jobs"
+            >
+            <button id="refreshJobs" class="button secondary" type="button">
+                Refresh
+            </button>
+        </div>
+
+        <p id="jobsMessage" class="message" role="status"></p>
+
+        <section id="jobsList" class="job-list">
+            <div class="empty-state">
+                <h2>Loading jobs...</h2>
+                <p>Please wait while available jobs are loaded.</p>
+            </div>
+        </section>
+    </main>
+
+    <script src="/js/auth.js"></script>
+    <script src="/js/profile.js"></script>
+    <script src="/js/jobs.js"></script>
+</body>
+</html>

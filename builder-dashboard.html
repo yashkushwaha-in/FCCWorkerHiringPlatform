@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Builder Dashboard | CONCO</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+    <header>
+        <a class="brand" href="/">CONCO</a>
+
+        <nav>
+            <a href="/">Home</a>
+            <a href="/post-job.html">Post a Job</a>
+            <a href="/jobs.html?mine=1">My Jobs</a>
+            <a href="/applications.html">Applications</a>
+
+            <div class="profile-menu">
+                <button class="profile-circle" id="profileButton" type="button" aria-label="Open profile menu">
+                    <span id="profileInitial">♙</span>
+                </button>
+
+                <div class="profile-dropdown" id="profileDropdown" hidden>
+                    <p id="profileName">Welcome to CONCO</p>
+                    <a href="/builder-profile.html">My Profile</a>
+                    <a href="/login.html" id="profileLogin">Login</a>
+                    <a href="/register.html" id="profileRegister">Create Account</a>
+                    <a href="/worker-dashboard.html" id="profileWorker" hidden>Worker Dashboard</a>
+                    <a href="/builder-dashboard.html" id="profileBuilder" hidden>Builder Dashboard</a>
+                    <a href="#" id="profileLogout" hidden>Logout</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="dashboard">
+        <section class="welcome">
+            <span class="eyebrow">BUILDER SPACE</span>
+            <h1 id="dashboardTitle">Builder Dashboard</h1>
+            <p id="welcomeMessage">
+                Manage your job postings and connect with skilled workers.
+            </p>
+        </section>
+
+        <section class="dashboard-grid three">
+            <article class="dashboard-card">
+                <div class="card-icon">＋</div>
+                <h2>Post a Job</h2>
+                <p>Create a job listing with the required skills, location, wage, and duration.</p>
+                <a class="button" href="/post-job.html">Create Job</a>
+            </article>
+
+            <article class="dashboard-card">
+                <div class="card-icon">▤</div>
+                <h2>My Job Listings</h2>
+                <p>Review the jobs you've posted and check their status.</p>
+                <a class="button" href="/jobs.html?mine=1">View My Jobs</a>
+            </article>
+
+            <article class="dashboard-card">
+                <div class="card-icon">✓</div>
+                <h2>Applications</h2>
+                <p>Review worker applications and manage your hiring decisions.</p>
+                <a class="button" href="/applications.html">Manage Applications</a>
+            </article>
+
+
+            
+        </section>
+
+        <p id="dashboardMessage" class="message" role="status"></p>
+    </main>
+
+    <script src="/js/auth.js"></script>
+    <script src="/js/profile.js"></script>
+    <script src="/js/builder.js"></script>
+</body>
+</html>

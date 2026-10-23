@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | CONCO</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+    <header>
+        <a class="brand" href="/">CONCO</a>
+
+        <nav>
+            <a href="/">Home</a>
+            <a href="/jobs.html">Find Work</a>
+            <a href="/register.html">Register</a>
+
+            <div class="profile-menu">
+                <button class="profile-circle" id="profileButton" type="button" aria-label="Open profile menu">
+                    <span id="profileInitial">♙</span>
+                </button>
+
+                <div class="profile-dropdown" id="profileDropdown" hidden>
+                    <p id="profileName">Welcome to CONCO</p>
+                    <a href="/login.html" id="profileLogin">Login</a>
+                    <a href="/register.html" id="profileRegister">Create Account</a>
+                    <a href="/worker-dashboard.html" id="profileWorker" hidden>Worker Dashboard</a>
+                    <a href="/builder-dashboard.html" id="profileBuilder" hidden>Builder Dashboard</a>
+                    <a href="#" id="profileLogout" hidden>Logout</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="auth-container">
+        <form id="loginForm" class="auth-card">
+            <h1>Welcome Back</h1>
+            <p>Login to your CONCO account.</p>
+
+            <label for="email">Email</label>
+            <input
+                id="email"
+                name="email"
+                type="email"
+                autocomplete="email"
+                required
+            >
+
+            <label for="password">Password</label>
+            <input
+                id="password"
+                name="password"
+                type="password"
+                autocomplete="current-password"
+                required
+            >
+
+            <button class="button full" type="submit">Login</button>
+
+            <p id="loginMessage" class="message" role="status"></p>
+
+            <p class="auth-footer">
+                Don't have an account?
+                <a href="/register.html">Register here</a>
+            </p>
+        </form>
+    </main>
+
+    <script src="/js/auth.js"></script>
+    <script src="/js/profile.js"></script>
+</body>
+</html>

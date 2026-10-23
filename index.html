@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONCO | Worker Hiring Platform</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+    <header>
+        <a class="brand" href="/">CONCO</a>
+
+        <nav>
+            <a href="/">Home</a>
+            <a href="/jobs.html">Find Work</a>
+            <a href="/login.html">Login</a>
+            <a href="/register.html">Register</a>
+
+            <div class="profile-menu">
+                <button class="profile-circle" id="profileButton" type="button" aria-label="Open profile menu">
+                    <span id="profileInitial">♙</span>
+                </button>
+
+                <div class="profile-dropdown" id="profileDropdown" hidden>
+                    <p id="profileName">Welcome to CONCO</p>
+                    <a href="/login.html" id="profileLogin">Login</a>
+                    <a href="/register.html" id="profileRegister">Create Account</a>
+                    <a href="/worker-dashboard.html" id="profileWorker" hidden>Worker Dashboard</a>
+                    <a href="/builder-dashboard.html" id="profileBuilder" hidden>Builder Dashboard</a>
+                    <a href="#" id="profileLogout" hidden>Logout</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="hero">
+        <span class="eyebrow">WORK · CONNECT · GROW</span>
+
+        <h1>
+            Find the Right Workers.<br>
+            Find the Right Work.
+        </h1>
+
+        <p>A simple platform connecting skilled workers with builders.</p>
+
+        <div class="actions">
+            <a class="button" href="/jobs.html">Explore Jobs</a>
+            <a class="button secondary" href="/register.html">Join CONCO</a>
+        </div>
+    </main>
+
+    <section class="feature-strip">
+        <article>
+            <h2>For Workers</h2>
+            <p>Discover job opportunities, apply for work, and track your applications.</p>
+        </article>
+
+        <article>
+            <h2>For Builders</h2>
+            <p>Publish job listings, find skilled workers, and manage applications.</p>
+        </article>
+
+        <article>
+            <h2>Simple and Clear</h2>
+            <p>Manage job listings and application status through one platform.</p>
+        </article>
+    </section>
+
+    <footer>
+        <p>CONCO — Worker Hiring Platform</p>
+    </footer>
+
+    <script src="/js/auth.js"></script>
+    <script src="/js/profile.js"></script>
+</body>
+</html>

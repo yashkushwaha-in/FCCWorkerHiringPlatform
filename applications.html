@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Applications | CONCO</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+    <header>
+        <a class="brand" href="/">CONCO</a>
+
+        <nav>
+            <a href="/">Home</a>
+            <a href="/worker-dashboard.html">Worker Dashboard</a>
+            <a href="/builder-dashboard.html">Builder Dashboard</a>
+            <a href="/jobs.html">Find Jobs</a>
+
+            <div class="profile-menu">
+                <button class="profile-circle" id="profileButton" type="button" aria-label="Open profile menu">
+                    <span id="profileInitial">♙</span>
+                </button>
+
+                <div class="profile-dropdown" id="profileDropdown" hidden>
+                    <p id="profileName">Welcome to CONCO</p>
+                    <a href="/login.html" id="profileLogin">Login</a>
+                    <a href="/register.html" id="profileRegister">Create Account</a>
+                    <a href="/worker-dashboard.html" id="profileWorker" hidden>Worker Dashboard</a>
+                    <a href="/builder-dashboard.html" id="profileBuilder" hidden>Builder Dashboard</a>
+                    <a href="#" id="profileLogout" hidden>Logout</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="dashboard">
+        <section class="welcome">
+            <span class="eyebrow">APPLICATION CENTRE</span>
+            <h1 id="applicationsHeading">Applications</h1>
+            <p id="applicationsDescription">
+                Track your job applications or review applications from workers.
+            </p>
+        </section>
+
+        <div class="toolbar">
+            <input
+                id="applicationSearch"
+                type="search"
+                placeholder="Search by job title or worker"
+                aria-label="Search applications"
+            >
+
+            <button id="refreshApplications" class="button secondary" type="button">
+                Refresh
+            </button>
+        </div>
+
+        <p id="applicationsMessage" class="message" role="status"></p>
+
+        <section id="applicationsList" class="job-list">
+            <div class="empty-state">
+                <h2>Loading applications...</h2>
+                <p>Your application records will appear here.</p>
+            </div>
+        </section>
+    </main>
+
+    <script src="/js/auth.js"></script>
+    <script src="/js/profile.js"></script>
+    <script src="/js/applications.js"></script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Worker Profile | CONCO</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header class="navbar">
+        <a class="logo" href="/">CONCO</a>
+        <nav>
+            <a href="/worker-dashboard.html">Dashboard</a>
+            <a href="/jobs.html">Find Jobs</a>
+            <a href="/applications.html">My Applications</a>
+        </nav>
+        <div class="profile-menu">
+            <button id="profileButton" class="profile-button" type="button">
+                <span id="profileInitial">U</span>
+            </button>
+            <div id="profileDropdown" class="profile-dropdown" hidden>
+                <p id="profileName">My Account</p>
+                <a href="/worker-profile.html">My Profile</a>
+                <a href="/worker-profile.html">My Profile</a>
+                <a id="profileLogin" href="/login.html">Login</a>
+                <a id="profileRegister" href="/register.html">Register</a>
+                <a id="profileWorker" href="/worker-dashboard.html" hidden>Worker Dashboard</a>
+                <a id="profileBuilder" href="/builder-dashboard.html" hidden>Builder Dashboard</a>
+                <a id="profileLogout" href="#">Logout</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="dashboard-header">
+            <h1>My Worker Profile</h1>
+            <p>Your account and work details.</p>
+        </section>
+
+        <section class="job-card">
+            <p id="profileMessage">Loading your profile...</p>
+            <div id="workerProfileDetails"></div>
+            <a class="button" href="/worker-dashboard.html">Back to Dashboard</a>
+        </section>
+    </main>
+
+    <script src="/js/profile.js"></script>
+    <script src="/js/worker.js"></script>
+    <script src="/js/worker-profile.js"></script>
+</body>
+</html>

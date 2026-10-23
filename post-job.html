@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post a Job | CONCO</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+    <header>
+        <a class="brand" href="/">CONCO</a>
+
+        <nav>
+            <a href="/">Home</a>
+            <a href="/builder-dashboard.html">Dashboard</a>
+            <a href="/jobs.html?mine=1">My Jobs</a>
+            <a href="/applications.html">Applications</a>
+
+            <div class="profile-menu">
+                <button class="profile-circle" id="profileButton" type="button" aria-label="Open profile menu">
+                    <span id="profileInitial">♙</span>
+                </button>
+
+                <div class="profile-dropdown" id="profileDropdown" hidden>
+                    <p id="profileName">Welcome to CONCO</p>
+                    <a href="/login.html" id="profileLogin">Login</a>
+                    <a href="/register.html" id="profileRegister">Create Account</a>
+                    <a href="/worker-dashboard.html" id="profileWorker" hidden>Worker Dashboard</a>
+                    <a href="/builder-dashboard.html" id="profileBuilder" hidden>Builder Dashboard</a>
+                    <a href="#" id="profileLogout" hidden>Logout</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="auth-container">
+        <form id="jobForm" class="auth-card wide">
+            <h1>Post a Job</h1>
+            <p>Tell workers about the work you need done.</p>
+
+            <label for="title">Job Title</label>
+            <input id="title" name="title" type="text" placeholder="e.g. Electrician required" required>
+
+            <label for="description">Job Description</label>
+            <textarea id="description" name="description" rows="4" placeholder="Describe the work and requirements" required></textarea>
+
+            <label for="location">Work Location</label>
+            <input id="location" name="location" type="text" placeholder="e.g. Pune" required>
+
+            <label for="skill_required">Skill Required</label>
+            <input id="skill_required" name="skill_required" type="text" placeholder="e.g. Electrical work" required>
+
+            <div class="form-row">
+                <div>
+                    <label for="workers_required">Workers Required</label>
+                    <input id="workers_required" name="workers_required" type="number" min="1" value="1" required>
+                </div>
+
+                <div>
+                    <label for="daily_wage">Daily Wage (₹)</label>
+                    <input id="daily_wage" name="daily_wage" type="number" min="0" placeholder="800" required>
+                </div>
+
+                <div>
+                    <label for="duration_days">Duration (days)</label>
+                    <input id="duration_days" name="duration_days" type="number" min="1" value="1" required>
+                </div>
+            </div>
+
+            <button class="button full" type="submit">Publish Job</button>
+
+            <p id="jobMessage" class="message" role="status"></p>
+
+            <p class="auth-footer">
+                <a href="/builder-dashboard.html">Back to Dashboard</a>
+            </p>
+        </form>
+    </main>
+
+    <script src="/js/auth.js"></script>
+    <script src="/js/profile.js"></script>
+    <script src="/js/builder.js"></script>
+</body>
+</html>
